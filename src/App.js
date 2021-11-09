@@ -1,21 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Fun from './components/Hello';
-import Fun2 from './components/Classs';
-import Hook from './components/Hook';
-import Check from './components/Check';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-
-      <Fun2 />
-
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    return(
+      <div className="App">
+        <h1>HEllos</h1>
+        <div>
+          <form>
+            <div className="form-group">
+                <label>Username : </label>
+                <br></br>
+                  <input type="text" name="username"></input>
+                  <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
