@@ -13,8 +13,17 @@ class Learning extends Component{
             ]
         };
     };
+ClickHandler = () => {
+    console.log("Hwllo shahriar");
+    alert('clicked');
+};
     render(){
-        return <h1>babu name is {this.state.fruits[1].name} and weight is {this.state.fruits[2].weight}</h1>
+        return (
+            <div>
+                <button onClick={this.ClickHandler}>Click ME </button>
+                <h1>babu name is {this.state.fruits[1].name} and weight is {this.state.fruits[2].weight}</h1>
+            </div>
+        );
     }
 };
 export default Learning
