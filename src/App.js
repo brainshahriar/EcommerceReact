@@ -3,17 +3,18 @@ import React from 'react';
 class App extends React.Component{
 
   state={
-    name:""
+    username:""
   }
 
   changeData =(e)=>{
-    let val =e.target.value;
-    this.setState({name:val})
+    let val =e.target.name;  //username
+    let myvalue=e.target.value //geting value
+    this.setState({[val]:myvalue}); //value set on the state
   }
   render(){
     return(
       <div className="App">
-        <h1>HEllos {this.state.name}</h1>
+        <h1>HEllos {this.state.username}</h1>
         <div>
           <form>
             <div className="form-group" style={{ marginLeft:200 }}>
