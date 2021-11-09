@@ -1,10 +1,10 @@
 import React from "react";
 
-function Hello(){
-    let a=5;
-    let b=10;
-    let sum=a+b;
-    return sum;
+function Hello(props){
+
+    return(
+            <h1>i love {props.name} and wight is {props.weight}</h1>
+    );
 }
 
 
