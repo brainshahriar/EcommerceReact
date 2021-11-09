@@ -1,0 +1,8 @@
+.Card{
+    width: 80%;
+    margin: auto;
+    border: 1px solid wheat;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}

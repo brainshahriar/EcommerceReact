@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import './Classs.css';
 
 class Learning extends Component{
 
@@ -25,12 +26,17 @@ ClickHandler = () => {
     });
 };
     render(){
+        const style={
+            backgroundcolor:'orange',
+            border:'2px solid moron',
+            cursor:'pointer',
+        };
         return (
             <div>
-                <button onClick={this.ClickHandler}>Click ME </button>
-                <h1>babu name is {this.state.fruits[0].name} and weight is {this.state.fruits[0].weight}</h1>
-                <h1>babu name is {this.state.fruits[1].name} and weight is {this.state.fruits[1].weight}</h1>
-                <h1>babu name is {this.state.fruits[2].name} and weight is {this.state.fruits[2].weight}</h1>
+                <button style={style} onClick={this.ClickHandler}>Click ME </button>
+                <h1 className="Card">babu name is {this.state.fruits[0].name} and weight is {this.state.fruits[0].weight}</h1>
+                <h1 className="Card">babu name is {this.state.fruits[1].name} and weight is {this.state.fruits[1].weight}</h1>
+                <h1 className="Card">babu name is {this.state.fruits[2].name} and weight is {this.state.fruits[2].weight}</h1>
 
             </div>
         );
