@@ -3,13 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import Fun from './components/Hello';
 import Fun2 from './components/Classs';
+import Hook from './components/Hook';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
 
-    <Fun2 />
+    <Hook />
 
       </header>
     </div>
