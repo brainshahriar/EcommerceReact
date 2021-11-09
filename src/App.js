@@ -8,9 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h1> <Fun name='orange' weight='50'/> </h1>
-       <h1> <Fun name='red' weight='50'/> </h1>
-       <h1> <Fun name='blue' weight='30'/> </h1>
+
+    <Fun2 />
 
       </header>
     </div>
