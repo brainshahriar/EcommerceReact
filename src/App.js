@@ -11,12 +11,17 @@ class App extends React.Component{
     let myvalue=e.target.value //geting value
     this.setState({[val]:myvalue}); //value set on the state
   }
+
+  formSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.username);
+  }
   render(){
     return(
       <div className="App">
-        <h1>HEllos {this.state.username}</h1>
+        <h1>Hello</h1>
         <div>
-          <form>
+          <form onSubmit={this.formSubmit}>
             <div className="form-group" style={{ marginLeft:200 }}>
                 <label>Username : </label>
                 <br></br>
