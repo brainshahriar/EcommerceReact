@@ -4,6 +4,7 @@ import About from "../components/about";
 import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Profile from "../components/profile";
+import Writepost from "../components/writepost";
 import App from "../App";
 import { Breadcrumb, Container, Form, FormControl, Nav, Navbar , NavDropdown } from 'react-bootstrap';
 import {
@@ -40,6 +41,9 @@ class header extends Component{
 </Navbar>
         </div>
         <Switch>
+        <Route path="/writepost">
+            <Writepost />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
