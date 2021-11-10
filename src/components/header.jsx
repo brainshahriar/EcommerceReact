@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import About from "../components/about";
+import Blog from "../components/blog";
+import Contact from "../components/contact";
+import Profile from "../components/profile";
+import App from "../App";
 import { Breadcrumb, Container, Form, FormControl, Nav, Navbar , NavDropdown } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
@@ -7,11 +12,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import App from "../App";
-import About from './components/about';
-import Blog from './components/blog';
-import Contact from './components/contact';
-import Profile from './components/profile';
+
 
 class header extends Component{
     render(){
