@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import { Container, Form, FormControl, Nav, Navbar , NavDropdown } from 'react-bootstrap';
+import { Breadcrumb, Container, Form, FormControl, Nav, Navbar , NavDropdown } from 'react-bootstrap';
 
 class App extends React.Component{
 
@@ -40,19 +40,10 @@ class App extends React.Component{
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">Link</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#" disabled>
-          Link
-        </Nav.Link>
+        <Nav.Link href="#action1">About Us</Nav.Link>
+        <Nav.Link href="#action2">Contact Us</Nav.Link>
+        <Nav.Link href="#action3">Blog</Nav.Link>
+        <Nav.Link href="#action3">Profile</Nav.Link>
       </Nav>
       <Form className="d-flex">
         <FormControl
@@ -66,10 +57,16 @@ class App extends React.Component{
     </Navbar.Collapse>
   </Container>
 </Navbar>
-        <h1>Student List</h1>
-        <ul class="list">
-          {items}
-        </ul>
+<Container fluid>
+<Breadcrumb>
+  <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+  <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+    Library
+  </Breadcrumb.Item>
+  <Breadcrumb.Item active>Data</Breadcrumb.Item>
+</Breadcrumb>
+</Container>
+
       </div>
     )
   }
