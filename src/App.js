@@ -15,11 +15,10 @@ class App extends React.Component{
 
     ];
     const items = names.map((item,idx)=>{
-      return <li key={idx}>
+      return <li class="list-item" key={idx}>
 
         Name:{item.name},Age: {item.age},Grade:{item.grade}
-        <button>Edit</button>
-        <button>Delete</button>
+        <button class="btn btn-sm btn-info">Edit</button> <button class="btn btn-sm btn-danger">Delete</button>
 
 
       </li>
@@ -28,9 +27,9 @@ class App extends React.Component{
     return(
       <div className="App">
         <h1>Student List</h1>
-        <div>
+        <ul class="list">
           {items}
-        </div>
+        </ul>
       </div>
     )
   }
