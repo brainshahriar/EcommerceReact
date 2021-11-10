@@ -1,15 +1,27 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Breadcrumb, Container, Form, FormControl, Nav, Navbar , NavDropdown } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import App from "../App";
+import About from './components/about';
+import Blog from './components/blog';
+import Contact from './components/contact';
+import Profile from './components/profile';
 
 class header extends Component{
     render(){
 
       return(
+        <Router>
         <div>
             <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+    <Navbar.Brand>  <Link to="/"> Navbar scroll </Link> </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -17,15 +29,33 @@ class header extends Component{
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">About Us</Nav.Link>
-        <Nav.Link href="#action2">Contact Us</Nav.Link>
-        <Nav.Link href="#action3">Blog</Nav.Link>
-        <Nav.Link href="#action3">Profile</Nav.Link>
+        <Nav.Link><Link to="/about">About Us </Link></Nav.Link>
+        <Nav.Link><Link to="/contact">Contact Us </Link></Nav.Link>
+        <Nav.Link><Link to="/blog">Blog </Link></Nav.Link>
+        <Nav.Link><Link to="/profile">Profile </Link></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
 </Navbar>
         </div>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/">
+            <App />
+          </Route>
+        </Switch>
+        </Router>
       );
 
     };
